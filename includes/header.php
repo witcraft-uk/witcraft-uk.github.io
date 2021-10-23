@@ -9,7 +9,7 @@
 <div class="nav2" style="width:245px;z-index:10;position:relative;margin-bottom:30px;">
     <div class="line2" style="width:225px;background-color:#ccc;"></div>
      <ul>
-        <li class="top-nav-home"><a href="graphic-design.html" style="color:#222;">Graphic design</a></li>
+        <li class="top-nav-home"><a href="graphic-design" style="color:#222;">Graphic design</a></li>
     </ul>
 </div>
 
@@ -26,8 +26,8 @@
 <div class="line2"></div>
     <div class="nav1">
         <ul>
-            <li class="top-nav-pages"><a href="blog.html">Blog</a></li>
-            <li class="top-nav-pages"><a href="design.html">Graphic design</a></li>
-            <li class="top-nav-pages"><a href="contact.html">Contact</a></li>
+            <li class="top-nav-pages"><a href="blog">Blog</a></li>
+            <li class="top-nav-pages"><a href="design">Graphic design</a></li>
+            <li class="top-nav-pages"><a href="contact">Contact</a></li>
         </ul>
     </div-->
