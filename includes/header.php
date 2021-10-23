@@ -1,5 +1,5 @@
 <div class="witcraft-home" style="margin: 10px 10px 50px 10px;z-index:10;position:relative;width:225px;">
-    <a href="index.html" style="color:#222">Witcraft</a>
+    <a href="/" style="color:#222">Witcraft</a>
 </div>
 
 <div class="page2">
@@ -19,7 +19,7 @@
 </div>
 
 <div class="witcraft-pages">
-    <a href="index.html">Witcraft</a>
+    <a href="/">Witcraft</a>
 </div>
 
 
