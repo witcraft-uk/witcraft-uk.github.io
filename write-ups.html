@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Blog | Witcraft</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <style>
+    .line3 {
+        background-color: #444;
+    }
+    .copy-blog, .headline {
+        color: #222;
+    }
+    </style>
+</head>
+
+<body style="background-color:#efefef;">
+
+<div class="page" id="witcraft">
+	<div class="line2" style="width:600px;"></div>
+</div>
+
+<div class="witcraft-blog">
+	<a href="index.html">Witcraft</a>
+</div>
+
+<div class="nav2" style="width:620px;">
+    <div class="line2" style="background-color:#ccc;"></div>
+     <ul style="margin-bottom: 30px;">
+        <li class="top-nav-home" style="color:#222">Write&#8208;ups</li>
+    </ul>
+ </div>
+
+<!--div class="page5">
+<div class="line1"></div>
+<div class="intro-blog">Write&#8208;ups by Divyesh Patel</div>
+</div-->
+
+
+<div class="page4" style="left:10px">
+
+<!--div class articles-blog starts here --
+<div class="articles-blog">
+
+
+ <?php
+$link = mysql_connect('188.121.42.224', 'Witcraft', 'Khedut2013!');
+if (!$link) {
+	die('Could not connect: ' . mysql_error());
+}
+mysql_select_db('Witcraft');
+mysql_query("INSERT INTO Blog(headline, article) VALUES('" . $_POST['headline'] . "','" . $_POST['article'] . "')");
+
+$result = mysql_query("SELECT * FROM Blog WHERE headline != ''");
+
+while ($row = mysql_fetch_array($result, MYSQL_NUM))
+{
+	echo '<div class="line3">' . '</div>' ;
+    echo '<div class="headline">' . $row[1] . '</div>';
+	 echo '<br/>';
+	 echo '<br/>';
+
+	$result2 = mysql_query("SELECT * FROM Blogpics WHERE headline = '" . $row[1] . "'");
+	 while ($row2 = mysql_fetch_array($result2, MYSQL_NUM))
+	 {
+		 echo "<img src=" . $row2[2] . ">";
+         echo '<br/>';
+	 }
+echo '<div class="copy-blog">'  . nl2br($row[2])  .'</div>';
+echo '<br/>';
+}
+mysql_free_result($result);
+
+
+?>
+
+
+</div> <!--div class articles-blog ends here-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="articles-blog">
+
+
+ <div class="line3"></div><div class="headline">My father remembered</div><br/><br/><img src=images/dad1.jpg><br/><img src=images/dad3.jpg><br/><img src=images/dad4.jpg><br/><div class="copy-blog">The closest I have ever come to being consanguineous with a polymath was through my father Dr. H. K. Patel. He wasn't exactly a polymath but was extremely versatile and had a variety of interests. He was the most naturally talented person I have ever known.<br />
+<br />
+History suggests that polymaths have long life spans, it allows them to explore their areas of interest thoroughly; the years my father did not live to enjoy. He lost his battle with cancer on 20th December 1989, aged 45.<br />
+<br />
+Besides being an affectionate father; he was a philatelist, a sportsman, an artist, a singer and an amateur musician, a polyglot, a raconteur, a chest physician and a natural leader. More than anything else, I remember him for his stoicism and overall contentment with a simple life. <br />
+<br />
+His interest in philately from a very young age resulted in a staggering accumulation of some 5000 stamps from around the world. I am still in awe of sheer scale and breadth of his collection. Most of his stamps have long ceased to exit.<br />
+<br />
+At university, he led a busy social life of sports and politics, playing in football and volleyball tournaments as team captain and getting elected as General Secretary, Food Secretary and Sports Secretary of his college for two consecutive years.<br />
+<br />
+It was the prelude to a full and active role as health authority specialising in TB prevention and care. The seeds of his political ambition were also sown at that time I believe, for he contemplated entering into mainstream politics later in life.<br />
+<br />
+Regardless of the academic pressure of medical study combined with several other undertakings, he found time to indulge his passion for art. A draughtsman and skilled watercolourist, he drew his surroundings and painted amazing sceneries from imagination.<br />
+<br />
+While growing up I copied his paintings many a time over, never quite achieving a similar result. It was only after completing formal education in visual art and illustration, I concluded that he was simply beyond my reach.<br />
+<br />
+As the Chief Secretary of Gujarat Tuberculosis Association and District Medical Officer, he headed the department of about two hundred doctors, touring extensively to treat poor inhabitants of Dang and Ahwa regions of South Gujarat.<br />
+<br />
+In 1981, he became the seventh chest physician in India to be awarded the fellowship by the World Health Organisation, thereby travelling to West Europe and Russia in the following year for further training.<br />
+<br />
+Nicknamed 'TB Patel' for his work and excellent administration, he resigned in 1985 to open his own clinic after 14 years in the service, becoming the topic of a feature article in a local newspaper and prompting the Director of Health to go on the record as calling him the finest doctor he had ever worked with.<br />
+<br />
+Music offers respite to the weary minds. My father played banjo and flute, and recorded his songs in the manner of a trained vocalist. Although his penchant for music was that of a dilettante, he was gifted with a great voice.<br />
+<br />
+Despite his East African upbringing, he devoured Gujarati, Hindi, Marathi and English classics. He claimed to have read K. N. Munshi Granthavali seventeen times. He could also speak fluent Swahili.<br />
+<br />
+An eager anecdotist, he amused us by telling short stories till his final days, many of which were his own creations. He was also a compulsive letter writer. His letters were witty and articulate.<br />
+<br />
+A steady smoker, he kicked the habit in homage to my maternal grandfather L. K. Patel - a scholar, a linguist, a lexicographer and an academic of Law - who once wrote to my father in admiration for his compassion quoting Bal Gangadhar Tilak: "You, being an ideal man, are a law unto yourself; you cannot act against your conscience".<br />
+<br />
+My father always regarded it as the greatest compliment he had ever received. Indeed, it is a tribute that sums up his life.</div><br/><div class="line3"></div><div class="headline">What is in a nickname?</div><br/><br/><div class="copy-blog">Graphic designers can describe themselves as problem solvers, creative communicators, typographers, visualisers or even visual engineers. Although I’ve always secretly believed that I am a graphic designer who can solve communication problems through creative visual engineering and typography.<br />
+<br />
+       As tall order goes, I have successfully solved myriad of problems by applying my design methodologies and deductive logic until recently, when I found myself wrestling with a taxonomical problem of coining an adverbial epithet to describe my fathering method. I had thought of Teddy Bear Daddy for the way my three year old wraps her arms around me, but I am neither cute nor cuddly.<br />
+<br />
+       This sudden interest in the taxonomy of parenting was, of course, brought about by Amy Chua and her ‘Battle Hymn of the Tiger Mother’. Professor Chua blames western society for failing their children by soft parenting and overindulgence and praise strict parenting traditions of Chinese and Indian cultures.<br />
+<br />
+       My daughter had been subjected to my sporadic roarings, but I am no Tiger Father. It is usually down to my frustration at not being able to control her mischiefs. I wouldn’t wake her up at 3am for an emergency Maths test, but being a designer with more than just a passing interest in calligraphy, I would make sure that she crosses her t’s and dots her i’s.<br />
+<br />
+       Talking of design, I felt a surge of excitement when my not yet 3 year old asked me, while pointing at a typographic roundel in her book, if it was a zero or an O. I pounced on this opportunity. I even referred to my type-design manuals so that I could explain her, in the simplest language possible, the subtle difference between a zero and an O. The trouble is children’s books are often drafted in kiddy typefaces. Wherein adults differentiate between a zero and an O by understanding the context, not the form; kids mingle them up.<br />
+<br />
+       My little genius had been on daily dose of alphabets, numbers, colours and pictures. Now I have also been drip-feeding her the typographic lessons. My effort, naturally, will yield better results in future when she grows up a bit. It did, however, solve my taxonomical problem... I am not a Tiger Father, nor a Teddy Bear Daddy. I am – of course – a Typophile Parent.</div><br/><div class="line3"></div><div class="headline">Wallpaper is the only one of its Type</div><br/><br/><div class="copy-blog">If there was a recipe for Indian type design, then it would simply state, first get an NID-trained designer to design the typeface and then serve it on paper with some images. NID has long been known as the only design institute in India where type design is on the menu of graphic design curriculum.<br />
+       <br />
+This sudden interest in Indian tradition of typeface design is, of course, brought about by the report that Wallpaper commissioned NID trained graphic designer Geetika Alok and London based type designer Henrik Kubel to design the headline typeface to add flavour to its Reborn in India issue of this month.<br />
+       <br />
+Type design is an established form of enquiry in Europe, whereas it is still in its embryonic stages in India. Only last year Satya Rajpurohit, another NIDian, teamed up with Peter Bilak of Typotheque to design Fedra Hindi, and launched Indian Type Foundry.<br />
+       <br />
+Therefore, I have always maintained that there are two kinds of graphic designers in India. NID trained typo-graphic designers and the rest of us. That is not to say I am not at ease with typography by the way.<br />
+       <br />
+When Mahendra Patel visited London last year, he phoned us to tell his whereabouts. I asked him if there is any font he would like me to write down his address in. "Frutiger", he said, laughing gleefully. My attempt looked good, types nicely structured, almost drawn on the ruled paper. Only to be pointed out later by my wife that Frutiger doesn't have serifs.</div><br/><div class="line3"></div><div class="headline">Love thy neighbour. Hate their mess.</div><br/><br/><div class="copy-blog">On Saturday morning I found two torn rubbish bags in our front yard which foxes had scavenged through for food. Some litter were strewn across the floor but luckily there was no food in the bags except for a banana skin. A noisome odor seemed to be rising from that banana skin and before it filled the whole yard, I got my neighbour to clean up the mess.<br />
+<br />
+Had I eaten the banana it wouldn't have smelt so foul, I thought, as I politely urged my neighbour to use her own bins or keep the garbage inside the house. We are all the same in this matter. Our bins are brighter, cleaner and better aligned, and our garbage is more hygenic and has less foul odor than our neighbours'. It is a great phenomenon. We envy our neighbours' possessions more than we feel comfortable admitting. But we don't ever envy their bins and rubbish sacks.<br />
+ <br />
+So in an ultimate act of proprietorship, we paint house numbers on all four sides of our wheelie bins with the thickest brush possible. Some people even add bin-art-stickers to make their bins cheerful and unique or to blend them out of the view. And if you're a graphic designer, you might be looking forever for a nice typeface to brand your bin. In any case, the purpose is to keep track of our bins and stop them getting mixed up with our neighbours'. Forget the bin, we wouldn't even swap our dog poop with their banana skin.<br />
+<br />
+Since I am talking about bins, it would be timely to mention certain 'Binned' Laden who was treated like garbage by the US forces. One tabloid front page read "Bin Bagged". I would've coined "Osama 'Binned' Laden" instead. Osama was much loved resident of Abbottabad but the mess he and his neighbours have made will take years to clean up.<br />
+<br />
+And finally, in India we are very high on recycling so we don't have various wheelie bins. We recycle absolutely everything from our valuable garbage to our gods. And only thing we ever threw in last hundred years or so was the British.</div><br/><div class="line3"></div><div class="headline">Chicken curry fishing</div><br/><br/><div class="copy-blog">In this gloom economic climate, take any broadsheet or current affair magazine and you'll come across one or two optimistic views about what future hold for this country. They say Britain will come out of recession on the back of its world-class creative industry and business ingenuity.<br />
+<br />
+There is an element of truth in this, I can say, having experienced both, Britain's creative industry - as a graphic designer - and now, their business ingenuity as a neighbour of a hobbyist fisherman - an English gentleman who recently offered to bring me a fresh trout in exchange for home-made chicken curry.<br />
+<br />
+The offer has legs (and fin), and even though it is not exactly a business proposition, it has all the ingredients of a good business deal with financial, cultural and social dimensions. On an originality scale, both of us rank this idea very highly, as the husbands of vegetarian wives. Thus, we are very unlikely to put our undertaking on the back-burner.<br />
+<br />
+My friend is also hoping to save considerable amount of money by opting for my culinary artwork rather than paying an overinflated price to our local take-away. And in the long run, I'll save some money too. It is this financial aspect that appeals to us the most. Not to mention, the value of authentic curry dish is much higher than local Indian take-away, which my good neighbour knows and appreciates.<br />
+<br />
+So yes, I say, Britain will come out of the financial crisis. But as the countries like China and India emerge as the new global economic powers, the playing field has levelled, therefore, the West may not be able to trade a piece of fish for a baltiful of chicken curry.</div><br/><div class="line3"></div><div class="headline">One W and twenty Hs (Hypotheses)</div><br/><br/><div class="copy-blog">What tennis is to sports, modernism is to design.<br />
+What lawn is to ground, uncoated texture is to paper.<br />
+What ball is to racket, recession is to economy.<br />
+What racket is to balls, Boris Becker is to love affairs.<br />
+What net is to players, accountant is to graphic designers.<br />
+What ball-boys and girls are to court, logos of sponsors are to a poster.<br />
+What audience is to game, wrap-around copy is to an image.<br />
+What rain is to players, server crash is to designers.<br />
+What Hawk Eye is to match officials, Apple Mac is to designers.<br />
+What doubles is to tennis, ligature is to typography.<br />
+What mixed doubles is to tennis, Optima is to typefaces. <br />
+What Wimbledon is to BBC, print media is to graphic design industry.<br />
+What English players are to tennis, junk emails are to server.<br />
+What Tim Henman was to English fans, comic sans is to home PC users.<br />
+What Grand Slam is to Andy Murray, throne is to Prince William.<br />
+What John McEnroe was to referees, David Carson was to typography.<br />
+What Sharapova is to Centre Court, Kate Middleton is to Buckingham Palace.<br />
+What Wimbledon is to tennis, Pentagram is to graphic design.<br />
+What Federer is to tennis, Helvetica is to design.<br />
+What form is to Federer, function is to design.</div><br/><div class="line3"></div><div class="headline">Less is more</div><br/><br/><div class="copy-blog">A top racing correspondent at Grand National once declared that "less is more" was the order of the day, as bare, shapely legs took to the track at Aintree. And he wasn't alluding to the horses, by the way, but to fashion savvy female race goers.<br />
+<br />
+'Less is more' is, of course, one of design's and life's most ubiquitous aphorisms. I have always been intrigued by the idea of "less", and have been engaged in exploring the concept in my practice, in my rhetoric and in my own thinking. <br />
+         <br />
+Artists are presented with this challenge when they have to fill notoriously difficult gallery space with authority. Egyptians triumphed the space majestically, so did Michael Angelo as he transformed the space into a medium in Sistine Chapel. <br />
+<br />
+Tolstoy's "Happy families are all alike; every unhappy family is unhappy in its own way" is a tenet of brevity and economy of form. And in 1970 World Cup final against Italy, Pele simply rolled the ball across for Carlos Alberto to blast the greatest goal in history of football.<br />
+<br />
+As is the case with all horse races, the jockeys, especially the unattached ones, flirt with the crowd, hoping to pair off with some lively company for a night on the town. Racing correspondent's assertion now makes all the "more" sense.</div><br/><div class="line3"></div><div class="headline">Can you think outside the box? Good, I cannot either.</div><br/><br/><div class="copy-blog">We bought a dishwasher last month to finally become a fully industrialised household. It was also one of the most momentous decisions we had taken for a long time, as it ended my artistic endeavours of seven years involving cups, bowls, plates and spoons.<br />
+<br />
+The old fashioned hand washing granted me considerable creative autonomy. The white draining board took the place of an art-board on which I dynamically laid out the utensils, chucking knives into the dish slots, thrusting spoons into the glasses and what not. More the items, the better. The arrangement looked different everyday.<br />
+<br />
+Now I stack our eating utensils in the dishwasher's pull-out racks. This basket-like framework imposes its own rules and standards on materials loaded. There is no room for experimentation. The dishes have to be placed in an organised manner, needless to say same size and type go together. The cups, bowls, silverware and cutlery are placed in the designated area. While the spoons, forks and knives go in their respective slots.<br />
+<br />
+This entire operation bears an uncanny resemblance to a design job with strict brand guidelines, or more so, to working with someone who can't... well, think outside the box.</div><br/><div class="line3"></div><div class="headline">Willem Crouwel or World Cup Cricket?</div><br/><br/><div class="copy-blog">If Saturday's final is going to be the greatest cricket match on the planet, then Design Musuem's "Wim Crouwel: A Graphic Odyssey" is the greatest current graphic design exhibition in the world.<br />
+<br />
+          If Tendulkar - the greatest batsman who ever took guard – has enthralled and entertained a billion for over two decades, then Wim Crouwel is one of the greatest living modernist graphic designers of the last century who has inspired, influenced and educated two generations of designers on both sides of the Atlantic in a career spanning 60 years.<br />
+<br />
+          And if Mumbai is the home of cricket, then London's Design Museum is a renowned centre for international contemporary design. The analogy may seem a little thin (or strange) but it may be because you don't bubble with enthusiasm for typography as I do.<br />
+<br />
+          Hence my friends, when you would be cheering Tendalya's glorious cover drives, I would be musing over Crouwel's typographic covers.      </div><br/>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> <!--div class page4 ends here-->
+
+<div id="temp">
+    <ul>
+   		<li class="top-nav-pages"><a href="#witcraft">Back to top</a></li>
+    </ul>
+</div>
+
+<!--script src="js/scroll.js"></script-->
+  <div style="width: 620px;
+    height: auto;
+    margin: 0px;
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #fff;"></div>
+    <script>
+    function setRandomColour () {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.round(Math.random() * 15)];
+    }
+    //document.body.style.backgroundColor = color;
+    }
+     setRandomColour();
+    </script>
+</body>
+</html>
+
+
+

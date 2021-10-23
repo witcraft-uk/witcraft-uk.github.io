@@ -1,0 +1,338 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {margin:0; padding:0; font:100%/140% 'Droid Sans', sans-serif; background-color:#222; }
+/*body#subpage {background-color:#FFF;}*/
+
+.line1 {height:1px; background-color:#888; margin:10px 10px 0px 10px;}
+.line2 {height:1px; background-color:#444; margin:10px 10px 0px 10px; z-index:10; position:relative;}  /*z-index and position relative added it works*/
+.line3 {height:1px; background-color:#888; margin-top:-1px;} /*blog copy*/
+.line4 {height:1px; background-color:#888; margin:10px 0px 0px 0px;} /*blog title*/
+
+
+.page {position:absolute; top:0; left:0; z-index:10; width:100%;}
+.page2 {position:absolute; top:0; left:0; right:0px;} /*left:235px*/
+.page3 {position:absolute; left:10px; } /*print page left:245px;*/
+.index-page {position:absolute; left:245px; width:600px; margin-top:11px;} /*index page*/
+.page4 {position:absolute; left:245px; width:600px;} /*blog*/
+.page5 {position:absolute; top:0; left:235px; right:0px;} /*blog intro*/
+/*.page6 {position:absolute; left:245px; right:10px;} contact*/
+
+
+.witcraft-home {margin:10px 10px 50px 10px;}
+.witcraft-home a {text-decoration:none; color:#FFF;font:140%/125% 'Droid Sans', sans-serif;}
+
+.intro {margin:0px 10px; color:#999; font:140%/125% 'Droid Sans', sans-serif;}
+.intro-blog {margin:0px 10px; color:#666; font:140%/125% 'Droid Sans', sans-serif;}
+.intro-contact {margin:0px 10px; color:#666; font:140%/125% 'Droid Sans', sans-serif; float:left;}
+.headlines-blog-title img {float:right; margin-top:5px; width:20px; height:20px;}
+
+.articles-blog {color:#666;}
+.headline {color:#000; font:140%/125% 'Droid Sans', sans-serif;}
+
+
+
+/*HOME NAV*/
+ul {list-style-type:none;margin:0px 10px; padding:0px; overflow:hidden;}
+li.top-nav-home a:link, li.top-nav-home a:visited {text-decoration:none; color:#999;}
+li.top-nav-home a:hover {text-decoration:none; color:#FFF;}
+/*li.top-nav-home.temp {color:#999;}*/
+/*#mylist li:first-child a {color:#FFF;}*/
+li.top-nav-home.interactive a, li.top-nav-home.print a {color:#FFF;}
+#temp {position:fixed; top:10px; display:none;}
+li.top-nav-home {display: inline-block; float:left; margin-right:30px; margin-top:2px;}
+#buttons-wrapper {margin-bottom:30px;}
+
+
+.nav1{width:245px; z-index:10; position:relative; margin-bottom:25px;} /*z-index and position relative added it works*/
+.nav2{border:0px #FFF solid;position:relative;} /*home page fixed nav*/
+
+.nav3{border:0px #000 solid; font:90%/140% 'Droid Sans', sans-serif;} /*blog*/
+.headlines-blog {list-style-type:none;margin:0px; padding:0px; overflow:hidden;} /*blog*/
+.headlines-blog-title {list-style-type:none;margin:0px; padding:0px; font:100%/160% 'Droid Sans', sans-serif;} /*blog and contact page*/
+
+.nav1-blog{float:left;width:245px;margin-bottom:25px;}
+
+
+/*TAG INDEX*/
+.grid {margin:0px;} /*NEW, old was : 0px 0 0 0*/
+.grid a {position: relative; vertical-align: top; outline:none; overflow: hidden; display:inline-block !important; margin:0 10px 10px 0;} /* - NEW, old was : 0 2px 2px 0 - float:left was not there, display:inline-block !important; */
+.grid a img {position: relative; float:left; border: 0; display:block; z-index: 10;} /* old was : display:block;*/
+.grid a span {position: absolute; top:0; left:0; width:100%; height:150px; background-image: none; display:table; z-index: 0; /*visibility:hidden;*/} /*NEW*/
+.grid a span em {font:90%/130% 'Droid Sans', sans-serif; padding:2px 0px; /*background:url(../images/misc/1px-green.jpg) repeat-x;*/ color:#ffffff; display:table-cell; visibility:hidden; border-top-width:1px; border-top-color:#444; border-top-style:solid;}
+/*
+.grid a:hover img {visibility:hidden; opacity:0.2;}
+.grid a:hover span {visibility:visible;}
+.grid a:hover span em {visibility:visible;}
+*/
+
+
+
+/*PAGES*/
+
+.copy{width:225px;color:#000;margin-left:10px; font:90%/140% 'Droid Sans', sans-serif; z-index:10; position:relative;}
+.copy-blog{color:#000;font:90%/140% 'Droid Sans', sans-serif;}
+
+.post{color:#666;font:90%/140% 'Droid Sans', sans-serif;}
+
+#container {position:absolute; z-index:9; left:0px; bottom:0px; top:0px; right:0px; background-color:#FFF;cursor:pointer;}
+#container img {opacity:0; left:0px; bottom:0px; top:0px; right:0px; position:fixed;} /*was display:none; for old function*/
+#container img:first-child {opacity:1;} /*new for opacity function*/
+
+#container .bgimg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    right: 0px;
+}
+
+#container .bgimg:first-child {
+    opacity: 1;
+}
+
+.copy span {cursor:pointer; text-decoration:underline;}
+.copy span:nth-child(3) {color:red; display:none; text-decoration:none;}
+
+.transparent {width: 245px; height:auto; margin:0px; position:fixed; z-index:9; top:0px; left:0px; bottom:0px; background-color:#FFF; opacity:0.7; filter:alpha(opacity=70); /* For IE8 and earlier */}
+
+li.top-nav-pages a:link, li.top-nav-pages a:visited {text-decoration:none; color:#666;}
+li.top-nav-pages a:hover {text-decoration:none; color:#000;}
+li.top-nav-pages.contact a, li.top-nav-pages.blog a {color:#000;}
+
+li.top-nav-blog a:link, li.top-nav-blog a:visited {text-decoration:none; color:#666;}
+li.top-nav-blog a:hover {text-decoration:none; color:#000;}
+
+.witcraft-pages {margin:10px 10px 50px 10px; z-index:10; position:relative; width:225px;} /*z-index and position relative added it works*/
+.witcraft-pages a {text-decoration:none; color:#000;font:140%/125% 'Droid Sans', sans-serif;}
+
+.witcraft-blog {margin:10px 10px 50px 10px; position:relative; width:225px;}
+.witcraft-blog a {text-decoration:none; color:#000;font:140%/125% 'Droid Sans', sans-serif;}
+
+/*FORM*/
+.write {font:90%/140% 'Droid Sans', sans-serif; color:#000;}
+form input {width:578px;margin-bottom:10px;padding:10px;outline:none;font:90%/140% 'Droid Sans', sans-serif; color:#000; border: 1px solid #666;}
+input:focus {border:1px solid #000;}
+textarea {width:578px; margin-bottom:10px; padding: 10px; overflow:hidden; outline:none; height:auto; font:90%/140% 'Droid Sans', sans-serif; color:#000; border: 1px solid #666;}
+textarea:focus {border:1px solid #000;}
+.submit {font:90%/140% 'Droid Sans', sans-serif; color:#000;padding:10px; border:1px solid #666; cursor:pointer; width:45px;margin-bottom:20px; margin-top:0px;}
+div.submit:hover {border:1px solid #000;}
+
+
+::-webkit-input-placeholder {font:90%/140% 'Droid Sans', sans-serif; color:#000;}
+
+:-moz-placeholder { /* Firefox 18- */   font:90%/140% 'Droid Sans', sans-serif; color:#000;  }
+
+::-moz-placeholder {  /* Firefox 19+ */   font:90%/140% 'Droid Sans', sans-serif; color:#000;  }
+
+:-ms-input-placeholder {   font:90%/140% 'Droid Sans', sans-serif; color:#000;  }
+
+
+/*home page stuff*/
+
+.headline-home {background:url(../images/misc/1px-green.jpg) repeat-x; height:75px;color:#FFF; font:140%/125% 'Droid Sans', sans-serif;}
+.copy-home{color:#999;font:90%/140% 'Droid Sans', sans-serif; margin:25px 0 25px 0;}
+.copy-home.witcraft{margin:0 0 25px 0;}
+
+.copy-home a:hover {color:#FFF;}
+.copy-home a {text-decoration:none; color:#999;}
+.home-hero-holder { position:relative;width:600px;height:400px; }
+.home-hero-holder.wipeslideshow2 {height:470px;}
+.home-hero-holder a img { border:none;}
+
+
+
+/*slideshow*/
+#wipeslideshow {overflow:hidden; position:relative; width:600px; height:400px;}
+#wipeslideshow img {display:none; position:absolute;}
+#wipeslideshow img:first-child {display:block;}
+#prev {top:175px;position:absolute;left:0px; cursor:pointer;}
+#next {top:175px;position:absolute; left:550px; cursor:pointer;}
+
+/*wipeslideshow2*/
+#wipeslideshow2 {width: 600px; height: 400px; overflow:hidden; position:relative; margin-bottom:4px;}
+#wipeslideshow2 img {display:none; position:absolute;}
+#wipeslideshow2 img:first-child {display:block;}
+#wipessbtns img {display:inline-block; margin:0; float:left; padding: 4px; }
+#wipessbtns img:first-child {border: 1px solid #888;}
+
+/*opacity slideshow*/
+#fadeinslideshow {position:relative; width:600px; height:400px;}
+#fadeinslideshow img {position:absolute; opacity:0;}
+#fadeinslideshow img:first-child {opacity:1;}
+#play, #pause {display:none;}
+#startit {display:block;}
+
+
+/*oo-slideshow*/
+#ooslideshow {overflow:hidden; position:relative; width: 600px; height: 400px;}
+#ooprev {top:175px;position:absolute;left:0px; cursor:pointer;}
+#oonext {top:175px;position:absolute; left:550px; cursor:pointer;}
+.one {width:0px; float:left;background-repeat:no-repeat;background-position:right;overflow:hidden;background-color:#FFF;height:400px;}
+.two {width:600px; float:left;overflow:hidden;background-color:#FFF;height:400px;}
+.three {width:0px; float:left;background-repeat:no-repeat;overflow:hidden;background-color:#FFF;height:400px;}
+
+/* four slideshows */
+.allfourslideshows {width:600px; height:400px;}
+#slideshow1, #slideshow2, #slideshow3, #slideshow4 {position:relative; float:left;width:300px; height:200px;}
+#slideshow2 img, #slideshow3 img, #slideshow4 img {display:none;}
+#slideshow1 img { position:absolute; }
+#slideshow1 img:first-child { z-index:1; }
+#slideshow2 img:first-child, #slideshow3 img:first-child, #slideshow4 img:first-child { display:block; }
+#next1 {margin-top:5px;left:270px;cursor:pointer; position:absolute; z-index:1; }
+#next2 {margin-top:5px;left:570px;cursor:pointer; position:absolute;}
+#next3 {margin-top:205px;left:270px;cursor:pointer; position:absolute;}
+#next4 {margin-top:205px;left:570px;cursor:pointer; position:absolute;}
+
+
+/*accordion*/
+.arrowholder {width:50px; height:50px;overflow:hidden;float:right;margin-top:7px;}
+.arrow {float:right;opacity:0.5;filter:alpha(opacity=50);}
+.arrow.items {margin-right:-50px;}
+#temp4div0 {height:530px;}
+.temp4div {height: 0px;overflow: hidden;width:600px;}
+
+/*drop down button for mobile*/
+#main_button_area div {    float:left;;width:108px; height:30px;cursor:pointer;margin:0 5px 5px 0;padding:5px 0 0 5px;}
+#main_button_area {position:relative;margin-bottom:130px;}
+#dropdown {width:115px;margin-bottom:50px;}
+#deskmob {cursor:pointer;}
+#main_content_area div {color:#666; font-size:7em; display:none; position:relative;}
+#main_content_area div {margin-bottom:20px;}
+.selected {border:1px solid #888;color:#FFF;}
+.not_selected {border:1px solid #999;color:#999;}
+.pointer {float:right;opacity:0.5;filter:alpha(opacity=50);margin-top:7px;cursor:pointer;}
+.headline-home.point {cursor:pointer;}
+.copy-home.mob{margin-top:60px;}
+
+
+/*dynamic drop down*/
+#cities {width:120px}
+
+/*ball game*/
+.ball{ top:auto; position:absolute; height:50px; bottom:0px;}
+.holdballs {position:relative;height:590px;}
+.headline-home-ball {height:70px;color:#FFF; font:140%/125% 'Droid Sans', sans-serif;}
+.copy-home-ball{color:#999;font:90%/140% 'Droid Sans', sans-serif; margin-bottom:25px;}
+
+/* lunch */
+.main-outer
+{
+width: 600px;
+height: 400px;
+background-color:#999;
+position:relative;
+}
+.outer
+{
+position:absolute;
+bottom:200px;
+left:165px;
+}
+.playeffect
+{
+position: absolute;
+top:280px;
+left:115px;
+}
+#lunch {text-align:center;}
+#button { padding: .5em 1em; text-decoration: none; }
+#effect { width: 250px; height: 125px; padding: 0.4em; position: relative; }
+#effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+.ui-effects-transfer { border: 2px dotted gray; }
+
+/*education*/
+
+.main_image_area {width:600px; height:295px;}
+.main_image_area div {position:relative;float:left;;width:143px; height:143px;cursor:pointer;margin:0 5px 5px 0;border:1px solid #666;}
+.main_image_area img
+{
+position:absolute;
+z-index:1;
+opacity:0.0;
+filter:alpha(opacity=1); /* For IE8 and earlier */
+}
+
+.main_image_area img:hover
+{
+opacity:1;
+filter:alpha(opacity=100); /* For IE8 and earlier */
+cursor:pointer;
+}
+
+
+.main_image_area p
+{
+font:72px Arial, Helvetica, sans-serif;
+font-weight:bold;
+color:#F00;
+text-align:center;
+display:none;
+margin-top:0px;
+}
+
+.main_image_area p span
+{
+font-size:30%;
+color:#fff;
+margin-top:0px;
+display:block;
+font-weight:normal;
+}
+
+
+/*distance calculator */
+
+
+form
+{
+width:600px;
+margin:auto;
+}
+
+label
+{
+width:250px;
+float:left;
+text-align:right;
+margin-right:1em;
+font-size:14px;
+}
+
+#from, #to
+{
+float:left;
+}
+
+button
+{
+display:block;
+clear:both;
+margin:auto;
+}
+
+div.interface
+{
+width:600px;
+height:400px;
+text-align:center;
+background-image:url(../images/misc/studio-dis-cal-new.jpg);
+background-position:bottom;
+background-repeat:no-repeat;
+background-color:#FFF;
+}
+
+div.write
+{
+width:600px;
+height:25px;
+position:absolute;
+text-align:center;
+}
+
