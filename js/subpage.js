@@ -21,17 +21,17 @@ var divs = document.querySelectorAll(".bgimg");
 //	winW = window.innerWidth;
 //	winH = window.innerHeight;
 //	}
-//	
+//
 //	var imageWidth;
 //	var imageHeight;
-//	
+//
 //	var winW;
 //	var winH;
 //	var ratio = 1.8;
-//	
+//
 //	if ((winW / winH) < 1.8) {imageHeight = winH; imageWidth = imageHeight * ratio;}
 //	if ((winW / winH) > 1.8) {imageWidth = winW; imageHeight = imageWidth / ratio;}
-//	
+//
 //	for (var i=0; i<=pics.length; i++) {
 //	pics[i].style.width = imageWidth + 'px';
 //	pics[i].style.height = imageHeight + 'px';
@@ -58,41 +58,41 @@ var readyNext = "yes";
 function changeBG () {
     if (readyNext == "yes") {
          readyNext = "no";
-          
+
 	if (divs.length == 1) {return false;}
-	
+
     var timer = null;
 	var op_plus = 0;
     var op_minus = 1;
-	
+
 	timer = setInterval(function () {
-        
+
 		if ( op == divs.length ) { op = 0; }
-        
+
 		if ( op_plus <= 1 ) {
 			op_plus += 0.1;
-			divs[op].style.opacity = op_plus; 
+			divs[op].style.opacity = op_plus;
 		}
 		var a = op - 1;
 		if ( a == -1 ) { a = divs.length - 1; }
-		
+
         if ( op_minus >= 0 ) {
 			op_minus -= 0.1;
 			divs[a].style.opacity = op_minus;
-            
+
 		}
-        else { 
+        else {
             readyNext = "yes";
             clearInterval(timer);
             op++;
         }
 	},50);
-    }    
+    }
 }
 
 function onClickEvents () {
-    
-    
+
+
 
 	//addEventHandler(container, "click", changeBG, false);
     container.addEventListener("click", changeBG, false);
@@ -109,5 +109,14 @@ function onClickEvents () {
 window.addEventListener("load", onClickEvents, false);
 
 
-
+function getQueryVariable(variable)
+{
+	var query = window.location.search.substring(1);
+	var vars = query.split("&");
+	for (var i=0;i<vars.length;i++) {
+		var pair = vars[i].split("=");
+		if(pair[0] == variable){return pair[1];}
+	}
+	return(false);
+}
 

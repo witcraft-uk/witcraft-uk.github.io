@@ -21,7 +21,7 @@
 <body style="background-color:#efefef;">
 
 <div class="page" id="witcraft">
-	<div class="line2" style="width:600px;"></div>
+	<div id="topline" class="line2" style="width:600px;"></div>
 </div>
 
 <div class="witcraft-blog">
@@ -253,18 +253,8 @@ This entire operation bears an uncanny resemblance to a design job with strict b
     left: 0px;
     bottom: 0px;
     background-color: #fff;"></div>
-    <script>
-    function setRandomColour () {
-    var letters = '0123456789ABCDEF'.split('');
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-        color += letters[Math.round(Math.random() * 15)];
-    }
-    //document.body.style.backgroundColor = color;
-    }
-     setRandomColour();
-    </script>
-</body>
+<script src="js/random-color-generator.js"></script>
+<script src="js/random-color-generator.js"></script></body>
 </html>
 
 
